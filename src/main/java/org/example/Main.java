@@ -1,5 +1,9 @@
 package org.example;
-
+/*
+ * author: Genesis Escobar
+ * fecha: 23/10/2025
+ * Descripcion: Punto de entrada al programa - menú que maneja las diferentes opciones y metodos de las clases
+ */
 import java.util.Scanner;
 import java.io.BufferedReader;
 import java.io.IOException;
