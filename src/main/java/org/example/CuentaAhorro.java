@@ -53,8 +53,8 @@ public class CuentaAhorro extends Cuenta {
             activa = false;
     }
     public void imprimir() {
-        System.out.println("Saldo= $ " + saldo);
-        System.out.println("Comision mesual = $ " + comisionMensual);
+        System.out.printf("Saldo= $ %.2f\n", saldo);
+        System.out.printf("Comision mensual = $ %.2f\n", comisionMensual);
         System.out.println("Numero de transacciones:" +(numeroDepositos + numeroRetiro));
     }
 }

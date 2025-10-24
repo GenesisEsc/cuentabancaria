@@ -21,7 +21,7 @@ public class CuentaCorriente extends Cuenta {
      * superior al saldo. El dinero que se debe queda como sobregiro.
      * @param cantidad Parametro que define cuanto se va a retirar
      */
-    public void retira(float cantidad) {
+    public void retirar(float cantidad) {
         float resultado = saldo - cantidad;
         if(resultado<0){
             sobregiro = sobregiro - resultado;
