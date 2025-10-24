@@ -1,17 +1,36 @@
 package org.example;
+/**
+ *
+ *
+ *
+ */
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
 public class Main {
-    static void main() {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        IO.println(String.format("Hello and welcome!"));
+    /**
+     *
+     *
+     */
+    public static void main(String[] args) throws IOException {
+        float saldo, tasaAhorros, cantidadDepositar, cantidadRetirar;
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        System.out.println("Cuenta Ahorros");
+        System.out.println("Ingrese el saldo inicial");
+        saldo = Float.parseFloat(br.readLine());
+        System.out.println("Ingrese la tasa de interes anual");
+        tasaAhorros = Float.parseFloat(br.readLine());
+        CuentaAhorro cuenta1= new CuentaAhorro(saldo,tasaAhorros);
+        System.out.println("Ingrese el cantidad de depositar");
+        cantidadDepositar = Float.parseFloat(br.readLine());
+        cuenta1.depositar(cantidadDepositar);
+        System.out.println("Ingrese el cantidad retirar: $");
+        cantidadRetirar = Float.parseFloat(br.readLine());
+        cuenta1.retirar(cantidadRetirar);
+        cuenta1.extractoMensual();
+        cuenta1.imprimir();
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            IO.println("i = " + i);
-        }
     }
 }

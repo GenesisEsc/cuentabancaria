@@ -1,6 +1,6 @@
 package org.example;
 /*
- *author: grupo 4
+ * author: Genesis Escobar
  * fecha y version: 23/10/2025 version: 1.0
  * descripcion: implementamos una clase cuenta que va a tener los siguientes atributos:
  * saldo tipo flotante se inicia en 0
